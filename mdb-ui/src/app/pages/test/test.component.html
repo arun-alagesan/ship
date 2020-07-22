@@ -1,0 +1,327 @@
+<div class=" d-flex flex-row flex-wrap ml-auto" >
+
+    <!-- <div class=' m-2 ' style="border:2px  red; width:500px;height: 200px;">
+        <app-turbo-charger></app-turbo-charger>
+    </div>
+    <div class=' m-2 ' style="border:2px  red; width:500px;height: 200px;">
+        <app-boilers></app-boilers>
+    </div>
+    <div class=' m-2 ' style="border:2px  red; width:1200px;height: 200px;">
+        <app-outlet-temperature></app-outlet-temperature>
+    </div> -->
+
+    <div class="card m-2">
+
+        <h5 class="card-header info-color white-text text-center py-2">
+          <strong>Operating Time Stamp</strong>
+        </h5>
+      
+        <!--Card content-->
+        <div class="card-body px-lg-3 pt-0">
+      <div>
+          <table class=" table-hover" >	
+      
+      
+          <tbody><tr>
+              <td colspan="2" style="font-size:16px;"><b></b></td>
+          </tr>
+      
+          <tr><td>&nbsp; &nbsp; </td></tr> 
+              <tr>
+              <td><small>Type of Operation</small></td>
+              <td class="input-container">  
+                      <select name="opertype" id="opertype" class="input-field" required="">
+                      <option>Normal Crusing</option>
+                      <option>Variable Speed</option>
+                      <option>Heavy Weather Operations</option>
+                      </select>  
+                  </td>
+          </tr>
+          <tr>
+              <td> <small>Start of the Report,LT</small></td>
+              <td class="input-container">  
+              <input type="text" name="startlt" class="input-field datepicker1" id=" startlt" ng-required="true" placeholder="MM/DD/YYYY">
+               
+               <span class="input-group-addon">
+                              <span class="fa fa-calendar" id="datepicker1"></span>
+                          </span>
+      
+          </td>
+          </tr>
+          <tr>
+              <td><small>Closing of the Report,LT</small></td>
+              <td class="input-container">
+                  <input type="text" name="closelt" id="closelt" class="input-field datepicker2" placeholder="MM/DD/YYYY">
+                 <span class="input-group-addon">
+                              <span class="fa fa-calendar" id="datepicker2"></span>
+                          </span>
+          
+          
+                   </td>
+          </tr>
+          <tr>
+              <td><small>Start Time Zone (UTC)</small></td>
+              <td class="input-container">  
+                      <select name="startzoneutc" class="input-field">
+                      <option>-18:00</option><option>-17:00</option><option>-16:00</option><option>-15:00</option><option>-14:00</option><option>-13:00</option><option>-12:00</option><option>-11:00</option><option>-10:00</option>
+                      <option>-09:00</option><option>-08:00</option><option>-07:00</option><option>-06:00</option><option>-05:00</option><option>-04:00</option><option>-03:00</option><option>-02:00</option><option>-01:00</option>
+                      <option>00:00</option><option>01:00</option><option>02:00</option><option>03:00</option><option>04:00</option><option>05:00</option><option>06:00</option><option>07:00</option><option>08:00</option><option>09:00</option>
+                      <option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option>
+                      </select>  
+              </td>
+          </tr>
+      
+          <tr>
+              <td><small>Closing Time Zone(UTC)</small></td>
+              <td class="input-container">  
+                  <select name="closezoneutc" class="input-field">
+                  <option>-18:00</option><option>-17:00</option><option>-16:00</option><option>-15:00</option><option>-14:00</option><option>-13:00</option><option>-12:00</option><option>-11:00</option><option>-10:00</option>
+                  <option>-09:00</option><option>-08:00</option><option>-07:00</option><option>-06:00</option><option>-05:00</option><option>-04:00</option><option>-03:00</option><option>-02:00</option><option>-01:00</option>
+                  <option>00:00</option><option>01:00</option><option>02:00</option><option>03:00</option><option>04:00</option><option>05:00</option><option>06:00</option><option>07:00</option><option>08:00</option><option>09:00</option>
+                  <option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option>
+                  </select>  
+              </td>
+          </tr>
+          <tr>
+              <td><small>Start Date/Time(UTC)</small></td>
+              <td class="input-container">
+                  
+                  <input type="text" name="startutc" id="startutc" class="input-field datepicker3" placeholder="MM/DD/YYYY">
+                   <span class="input-group-addon">
+                              <span class="fa fa-calendar" id="datepicker3"></span>
+                          </span>
+                  </td>
+          </tr>
+          <tr>
+              <td><small>Closing Date/Time(UTC)</small></td>
+              <td class="input-container">
+                  <input type="text" name="closeutc" id="closeutc" class="input-field datepicker4" placeholder="MM/DD/YYYY">
+                    <span class="input-group-addon">
+                              <span class="fa fa-calendar" id="datepicker4"></span>
+                          </span>
+                  </td>
+          </tr>
+          <tr>
+              <td><small>Period since Last Report</small></td>
+              <td>
+                  
+                             <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="" aria-label="Period since Last Report" aria-describedby="basic-addon1">
+          <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"><small>Hrs</small></span>
+        </div>
+      </div> 
+              </td>
+          </tr>	
+      
+             
+                 </tbody></table>	
+      </div>
+       </div>
+         </div>
+
+
+         <div class="card m-2 ">
+
+            <h5 class="card-header blue white-text text-center py-2">
+              <strong>
+          Operating Condition</strong>
+            </h5>
+          
+            <!--Card content-->
+            <div class="card-body px-lg-3 pt-0">
+          <div class="m-2">
+              <table class=" table-hover" style="/* font-size:12px; *//* font-family: Verdana; */">	
+          
+                  <tbody><tr>
+                      <td><small>Sailing Plan</small></td>
+                      <td class="input-container">  
+                              <select name="sailplan" id="sailplan" class="input-field" required="">
+                              <option>Plan Available</option>
+                              <option>Plan Unavailable</option>
+                              <option>No Change in plan</option>
+                              <option>Change in plan</option>
+                              </select>  
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><small>Destination Port</small></td>
+                      <td class="input-container">
+                          <input type="text" name="destport" id="destport" class="input-field" placeholder="" autocomplete="off"></td>
+                  </tr>
+                  <tr>
+                      <td><small>Destination Port Code</small></td>
+                      <td class="input-container"><input type="text" name="destportcode" id="destportcode" class="input-field" placeholder="" autocomplete="off"></td>
+                  </tr>
+                  <tr>
+                      <td><small>Destination Port Time Zone</small></td>
+                      <td class="input-container">  
+                              <select name="destzone" class="input-field">
+                          <option>-18:00</option><option>-17:00</option><option>-16:00</option><option>-15:00</option><option>-14:00</option><option>-13:00</option><option>-12:00</option><option>-11:00</option><option>-10:00</option>
+                          <option>-09:00</option><option>-08:00</option><option>-07:00</option><option>-06:00</option><option>-05:00</option><option>-04:00</option><option>-03:00</option><option>-02:00</option><option>-01:00</option>
+                          <option>00:00</option><option>01:00</option><option>02:00</option><option>03:00</option><option>04:00</option><option>05:00</option><option>06:00</option><option>07:00</option><option>08:00</option><option>09:00</option>
+                          <option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option>
+                          </select>  
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><small> ETA Pilot Station</small></td>
+                      <td class="input-container">  <input type="text" id="etapilotlt" class="input-field datepicker5" name="etapilotlt" required="">  
+                       <span class="input-group-addon">
+                                  <span class="fa fa-calendar" id="datepicker5"></span>
+                              </span>
+                      </td>
+                      
+                  </tr>
+                  <tr>
+                      <td><small> ETA Port</small></td>
+                      <td class="input-container"> 
+                      <input type="text" id="etaportlt" class="input-field datepicker6" name="etaportlt" required="">  
+                       <span class="input-group-addon">
+                                  <span class="fa fa-calendar" id="datepicker6"></span>
+                              </span>
+                      </td>
+                      
+                  </tr>			
+                  <tr>
+                      <td><small>Remaining Distance to EOSP</small></td>
+                      <td>
+                              
+                      <div class="input-group ">
+            <input type="text" class="form-control" placeholder="" aria-label="Remaining Distance to EOSP" aria-describedby="basic-addon1">
+              <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"><small>Nm</small></span>
+            </div>
+          </div>    
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><small>Remaining Time to EOSP</small></td>
+                      <td>
+                          
+                      <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="" aria-label="Remaining Time to EOSP" aria-describedby="basic-addon1">
+              <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"><small>Hrs</small></span>
+            </div>
+          </div>    
+                          
+                          
+                      </td>
+                  </tr>						
+          
+              
+          </tbody></table>
+          </div>
+           </div>
+             </div>
+
+        <div class="card m-2">
+
+                <h5 class="card-header info-color white-text text-center py-2">
+                  <strong>Voyage Plan</strong>
+                </h5>
+              
+                <!--Card content-->
+                <div class="card-body px-lg-3 pt-0">
+              <div>
+                  <table class=" table-hover" >	
+              
+                      <tbody><tr>
+                          <td><small>Sailing Plan</small></td>
+                          <td class="input-container">  
+                                  <select name="sailplan" id="sailplan" class="input-field" required="">
+                                  <option>Plan Available</option>
+                                  <option>Plan Unavailable</option>
+                                  <option>No Change in plan</option>
+                                  <option>Change in plan</option>
+                                  </select>  
+                          </td>
+                      </tr>
+                      <tr>
+                          <td><small>Destination Port</small></td>
+                          <td class="input-container">
+                              <input type="text" name="destport" id="destport" class="input-field" placeholder="" autocomplete="off"></td>
+                      </tr>
+                      <tr>
+                          <td><small>Destination Port Code</small></td>
+                          <td class="input-container"><input type="text" name="destportcode" id="destportcode" class="input-field" placeholder="" autocomplete="off"></td>
+                      </tr>
+                      <tr>
+                          <td><small>Destination Port Time Zone</small></td>
+                          <td class="input-container">  
+                                  <select name="destzone" class="input-field">
+                              <option>-18:00</option><option>-17:00</option><option>-16:00</option><option>-15:00</option><option>-14:00</option><option>-13:00</option><option>-12:00</option><option>-11:00</option><option>-10:00</option>
+                              <option>-09:00</option><option>-08:00</option><option>-07:00</option><option>-06:00</option><option>-05:00</option><option>-04:00</option><option>-03:00</option><option>-02:00</option><option>-01:00</option>
+                              <option>00:00</option><option>01:00</option><option>02:00</option><option>03:00</option><option>04:00</option><option>05:00</option><option>06:00</option><option>07:00</option><option>08:00</option><option>09:00</option>
+                              <option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option>
+                              </select>  
+                          </td>
+                      </tr>
+                      <tr>
+                          <td><small> ETA Pilot Station</small></td>
+                          <td class="input-container">  <input type="text" id="etapilotlt" class="input-field datepicker5" name="etapilotlt" required="">  
+                           <span class="input-group-addon">
+                                      <span class="fa fa-calendar" id="datepicker5"></span>
+                                  </span>
+                          </td>
+                          
+                      </tr>
+                      <tr>
+                          <td><small> ETA Port</small></td>
+                          <td class="input-container"> 
+                          <input type="text" id="etaportlt" class="input-field datepicker6" name="etaportlt" required="">  
+                           <span class="input-group-addon">
+                                      <span class="fa fa-calendar" id="datepicker6"></span>
+                                  </span>
+                          </td>
+                          
+                      </tr>			
+                      <tr>
+                          <td><small>Remaining Distance to EOSP</small></td>
+                          <td>
+                                  
+                          <div class="input-group ">
+                <input type="text" class="form-control" placeholder="" aria-label="Remaining Distance to EOSP" aria-describedby="basic-addon1">
+                  <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><small>Nm</small></span>
+                </div>
+              </div>    
+                          </td>
+                      </tr>
+                      <tr>
+                          <td><small>Remaining Time to EOSP</small></td>
+                          <td>
+                              
+                          <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="" aria-label="Remaining Time to EOSP" aria-describedby="basic-addon1">
+                  <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><small>Hrs</small></span>
+                </div>
+              </div>    
+                              
+                              
+                          </td>
+                      </tr>						
+              
+                  
+              </tbody></table>
+              </div>
+               </div>
+                 </div>
+    
+    
+    <app-boiler-water-system class="m-2" ></app-boiler-water-system>
+    <app-turbo-charger class="m-2"></app-turbo-charger>
+    <app-boilers class="m-2"></app-boilers>
+    <app-outlet-temperature class="m-2"></app-outlet-temperature> 
+    <app-me-lube-system class="m-2"></app-me-lube-system>
+
+</div>
+
+
+
+
+
+
+

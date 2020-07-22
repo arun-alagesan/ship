@@ -1,0 +1,55 @@
+<!--Navbar-->
+<!-- <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark blue ie-nav fixed-top" [containerInside]="false"> -->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark blue fixed-top"  [containerInside]="false" *ngIf="this.isLoggedIn | async">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand> <img src="http://eliteproducts.in/apurinks/my/design/images/seeas-nwe-2.png" alt="Ritex" style="height: 60px;
+      max-width: 100%;">
+      <a class="navbar-brand" href="#"></a></mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['home']"> <i class="fas fa-home "></i> Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['vessellog']"><mdb-icon fas icon="envelope"></mdb-icon> Vessel Log<span class="sr-only"></span></a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['settings']"><mdb-icon fas icon="cog"></mdb-icon> Settings</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['reports']"><i class="fas fa-print" ></i> View Report <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item dropdown" dropdown>
+            <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                <i class="fas fa-edit    "></i> Create Report <span class="caret"></span></a>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+                <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['create']"><i class="fas fa-print "></i>  Sea Report</a>
+                <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['create']"><i class="fas fa-print"></i> Port Report</a>
+              </div>
+        </li>
+        
+        
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            <mdb-icon fas icon="user"></mdb-icon> Profile<span class="caret"></span></a>
+          <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">My account</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="login"  >{{this.user.name}}</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="login" *ngIf="!this.isLoggedIn" >Log in</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="login" *ngIf="this.isLoggedIn " >Log out</a>
+          </div>
+        </li>
+  
+      </ul>
+      <!-- Links -->
+    </links>
+    <!-- Collapsible content -->
+  
+</mdb-navbar>
+  <!--/.Navbar-->

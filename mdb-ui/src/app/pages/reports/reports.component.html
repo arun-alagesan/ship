@@ -1,0 +1,30 @@
+<!-- Material form subscription --> 
+<!-- <mdb-card class='m-2'>
+  <mdb-card-header class="blue white-text text-center py-2">
+      <strong>Reports List</strong>
+  </mdb-card-header>
+  Card content-->
+  <!--<mdb-card-body class="px-lg-5"> -->
+<div class="card m-2 p-2">
+      <table mdbTable striped="true" hover="true" >
+          <thead class="blue white-text lighten-2">
+            <tr>
+              <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr  mdbTableCol *ngFor="let el of elements ">
+              <th scope="row"  >{{el.number}}</th>
+              <td>{{el.type}}</td>
+              <td>{{el.createdDate}}</td>
+              <td>{{el.createdBy}}</td>
+              <td>{{el.status}}</td>
+              <td><a mdbBtn color="blue" size="sm" mdbWavesEffect type="button" class="m-0">Edit</a></td>
+            </tr>
+          </tbody>
+        </table>
+      
+</div>
+  <!-- </mdb-card-body>
+</mdb-card> -->
+<!-- Material form subscription -->

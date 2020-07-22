@@ -1,0 +1,18 @@
+<div style="width: 250px; " *ngIf="this.nav.isNavigationEnabled | async">
+
+<!-- Sidebar navigation -->
+
+  <!-- Logo -->
+    <div class="logo-wrapper waves-light">
+        
+    </div>
+    <div class="d-flex flex-column mb-3">
+        <a routerLink="reports/header" mdbBtn type="button" class="blue" style="color:white" mdbWavesEffect>Header</a>
+        <a routerLink="reports/operations" mdbBtn type="button" class="blue" style="color:white" mdbWavesEffect>Operations</a>
+        <a routerLink="reports/engine" mdbBtn type="button" class="blue" style="color:white" mdbWavesEffect>Engine</a>
+        <a routerLink="reports/deck" mdbBtn type="button" class="blue" style="color:white" mdbWavesEffect>Deck</a>
+        <!-- <button mdbBtn type="button" color="deep-purple" mdbWavesEffect>Deep-Purple</button>
+        <button mdbBtn type="button" color="indigo" mdbWavesEffect>Indigo</button> -->
+    </div>
+
+</div>
