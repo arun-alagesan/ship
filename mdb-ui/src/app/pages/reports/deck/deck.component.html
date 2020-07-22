@@ -1,1 +1,10 @@
-<p>deck works!</p>
+<div class="md-form">
+    <div class="btn-group-sm" role="group" aria-label="Basic example">
+        <a mdbBtn  color="primary" class="waves-light m-1" mdbWavesEffect [routerLink] = "['observations']" >Observations</a>
+        <a mdbBtn  color="primary" class="waves-light m-1" mdbWavesEffect [routerLink] = "['cargo']">Cargo </a>
+        <a mdbBtn  color="primary" class="waves-light m-1" mdbWavesEffect [routerLink] = "['systems']">Systems</a>
+        <a mdbBtn  color="primary" class="waves-light m-1" mdbWavesEffect [routerLink] = "['stoppages']">Stoppages</a>
+        <a mdbBtn  color="primary" class="waves-light m-1" mdbWavesEffect [routerLink] = "['workdone']">Work Done</a>
+    </div>
+</div>
+<router-outlet></router-outlet>

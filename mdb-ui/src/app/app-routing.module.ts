@@ -22,8 +22,29 @@ const routes: Routes = [
   {path: 'create', component: HeaderComponent },
   {path: 'reports/header', component: HeaderComponent },
   {path: 'reports/operations', component: OperationsComponent },
-  {path: 'reports/engine', component: EngineComponent },
-  {path: 'reports/deck', component: DeckComponent },
+  {path: 'reports/engine', component: EngineComponent,
+      children: [
+        {path: 'mainengine', component: HeaderComponent},
+        {path: 'auxillary', component: OperationsComponent},
+        {path: 'switchboard', component: HeaderComponent},
+        {path: 'boilers', component: OperationsComponent},
+        {path: 'systems', component: HeaderComponent},
+        {path: 'runhours', component: OperationsComponent},
+        {path: 'consumption', component: HeaderComponent},
+        {path: 'bunker', component: HeaderComponent},
+        {path: 'stock', component: OperationsComponent},
+        {path: 'tank', component: HeaderComponent},
+        {path: 'performance', component: OperationsComponent},
+        {path: 'workdone', component: HeaderComponent},
+  ]},
+  {path: 'reports/deck', component: DeckComponent, 
+    children: [
+      {path: 'Observations', component: HeaderComponent},
+      {path: 'cargo', component: OperationsComponent},
+      {path: 'systems', component: HeaderComponent},
+      {path: 'stoppages', component: OperationsComponent},
+      {path: 'workdone', component: HeaderComponent},
+  ]},
 
   {path: '**', redirectTo: 'login'}
 ];

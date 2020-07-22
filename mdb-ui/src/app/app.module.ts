@@ -30,6 +30,12 @@ import { EngineComponent } from './pages/reports/engine/engine.component';
 import { DeckComponent } from './pages/reports/deck/deck.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { VesselLogComponent } from './pages/vessel-log/vessel-log.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatTabsModule } from '@angular/material/tabs';
+
+
+
 
 
 
@@ -64,7 +70,9 @@ import { VesselLogComponent } from './pages/vessel-log/vessel-log.component';
     FormsModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTabsModule
   ],
   providers: [
     ReportsService,
