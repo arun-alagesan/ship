@@ -1,6 +1,8 @@
-# AngularFreeDemo
+# AngularDemo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+
+This project uses the [MDB Free modules](https://mdbootstrap.com/docs/angular/forms/basic/) for the components
 
 ## Development server
 
