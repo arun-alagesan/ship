@@ -4,6 +4,7 @@ Repo for re writing the site `http://seeas.org/ship/index.php` building the same
 
 ship -> mdb-ui is the angular project `cd mdb-ui` 
 for the first time run the `npm install` the dependencies and do `npm build && npm start` to launch the app in the browser.
+refer [mdb-ui/README.md](/mdb-ui/README.md) for instructions
 
 ship -> service-api is the node.js backend api backed up with express.js for serving the api.
 `cd service-api` and do `npm install` for the first time and then `npm start`
